@@ -120,9 +120,12 @@
 
             function _highlightElement() {
                 var currentPos = $fkEl.css('position');
-                if (currentPos === 'static') {
+                if ($fkEl.hasClass('btn')) {
+                    $fkEl.addClass(this.nonStaticClass);
+                }else if (currentPos === 'static') {
                     $fkEl.addClass(this.staticClass);
-                } else {
+                } 
+                else {
                     $fkEl.addClass(this.nonStaticClass);
                 }
 
